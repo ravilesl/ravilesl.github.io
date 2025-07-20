@@ -1,0 +1,215 @@
+/* Importar fuentes de Google Fonts (ya están en el HTML, pero es buena práctica para referencia) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* Variables CSS para una paleta de colores pastel mejorada */
+:root {
+    --primary-color: #6C7BBF; /* Azul suave oscuro */
+    --secondary-color: #A0B9E5; /* Azul claro pastel */
+    --accent-color: #CDEEF9; /* Azul cielo muy claro */
+    --text-dark: #343a40; /* Casi negro de Bootstrap */
+    --text-muted: #6c757d; /* Gris para texto secundario */
+    --bg-light: #f8f9fa; /* Fondo claro de Bootstrap */
+    --bg-white: #ffffff; /* Blanco puro */
+}
+
+/* Estilos generales y de tipografía */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--bg-white);
+    scroll-behavior: smooth; /* Para el smooth scrolling nativo */
+}
+
+h1, h2, h3, .navbar-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+h1 {
+    color: var(--bg-white); /* En hero section */
+}
+
+h2 {
+    color: var(--primary-color); /* Títulos de sección */
+}
+
+.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.btn-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--bg-white);
+    border-color: var(--primary-color);
+}
+
+/* --- Navbar Mejorado --- */
+.navbar-brand {
+    color: var(--primary-color) !important;
+}
+
+.nav-link.fw-semibold {
+    font-weight: 600 !important;
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+/* --- Hero Section Mejorada --- */
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    min-height: 100vh; /* Asegura que ocupe toda la altura visible */
+    padding-top: 56px; /* Para compensar la altura de la navbar fija */
+    animation: fadeInBackground 2s ease-in-out forwards; /* Animación de entrada */
+}
+
+@keyframes fadeInBackground {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.hero-section h1 {
+    font-size: 3.8rem;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+}
+
+.hero-section .lead {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+.hero-section .btn {
+    border-color: var(--bg-white) !important;
+    color: var(--primary-color) !important;
+    background-color: var(--bg-white) !important;
+    transition: all 0.3s ease;
+}
+.hero-section .btn:hover {
+    background-color: var(--accent-color) !important;
+    color: var(--primary-color) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+
+/* --- Secciones Generales (ajustes a Bootstrap) --- */
+section {
+    padding: 5rem 0; /* Bootstrap py-5 hace 3rem. 5rem es más espacioso */
+    overflow: hidden; /* Para asegurar que las animaciones no desborden */
+}
+
+/* --- Portfolio Section --- */
+.portfolio-section .card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    background-color: var(--bg-white);
+}
+
+.portfolio-section .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.portfolio-section .card-img-top {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* --- About Section --- */
+.about-section .img-fluid {
+    border: 8px solid var(--accent-color); /* Borde más pronunciado */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+}
+
+.contact-section .form-control {
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: var(--bg-white);
+    font-weight: 300;
+}
+
+.contact-section .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-section .form-control:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: var(--bg-white);
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+    color: var(--bg-white);
+}
+
+.contact-section .btn-light {
+    color: var(--primary-color) !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease;
+}
+
+.contact-section .btn-light:hover {
+    background-color: var(--bg-light) !important;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.social-links a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-5px) scale(1.1);
+    color: var(--accent-color) !important; /* Cambia de color al pasar el ratón */
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: var(--text-dark); /* Color oscuro para el footer */
+}
+
+/* Media Queries para responsividad (Bootstrap ya maneja gran parte) */
+@media (max-width: 991.98px) { /* Tablet y móvil */
+    .navbar-collapse {
+        background-color: var(--bg-white);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        margin-top: 0.5rem;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .navbar-nav .nav-item {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
+    .navbar-nav .nav-link {
+        padding-left: 1rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.8rem;
+    }
+    .hero-section .lead {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 767.98px) { /* Móviles pequeños */
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+    .about-section .img-fluid {
+        width: 250px;
+        height: 250px;
+    }
+}
