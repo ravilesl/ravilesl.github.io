@@ -1,11 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Smooth scrolling para los enlaces del menú
-    document.querySelectorAll('.navbar-nav a, .hero-section .btn').forEach(anchor => {
+
+    // ----------------------------------------------------
+    // 1. Smooth scrolling para los enlaces del menú
+    // ----------------------------------------------------
+    const navbarLinks = document.querySelectorAll('.navbar-nav a, .hero-section .btn');
+    const navbar = document.querySelector('.navbar');
+
+    navbarLinks.forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            
             // Cierra el menú hamburguesa si está abierto (para móviles)
-            const navbarToggler = document.querySelector('.navbar-toggler');
             const navbarCollapse = document.querySelector('#navbarNav');
-            if (navbarToggler && navbarCollapse.classList.contains('show')) {
+            if (navbarCollapse.classList.contains('show')) {
                 const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
                 bsCollapse.hide();
             }
@@ -16,9 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
             const targetElement = document.querySelector(targetId);
 
             if (targetElement) {
-                const headerOffset = document.querySelector('.navbar').offsetHeight; // Altura de la navbar
+                const headerOffset = navbar.offsetHeight;
                 const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                const offsetPosition = elementPosition - headerOffset - 20; // -20px para un poco de espacio extra
+                const offsetPosition = elementPosition - headerOffset - 20;
 
                 window.scrollTo({
                     top: offsetPosition,
@@ -28,7 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Validación y envío del formulario de contacto
+    // ----------------------------------------------------
+    // 2. Validación del formulario de contacto
+    // ----------------------------------------------------
     const contactForm = document.querySelector('.contact-form');
 
     if (contactForm) {
@@ -38,24 +46,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('email').value.trim();
             const message = document.getElementById('message').value.trim();
 
-            // Si algún campo está vacío, mostramos una alerta y detenemos el envío
             if (!name || !email || !message) {
-                e.preventDefault(); // Detenemos el envío
+                e.preventDefault();
                 alert('Por favor, completa todos los campos.');
                 return;
             }
 
-            // Validación básica de email
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
-                e.preventDefault(); // Detenemos el envío
+                e.preventDefault();
                 alert('Por favor, ingresa un correo electrónico válido.');
                 return;
             }
 
-            // Si la validación es exitosa, el formulario se enviará
-            // a la URL especificada en el atributo 'action' del HTML.
-            // No necesitamos hacer nada más aquí.
+            // Si la validación es exitosa, el formulario se enviará.
+            // No se necesita más código aquí para que Getform funcione.
         });
     }
 });
