@@ -7,318 +7,13 @@
     <title>Richard Avilés López - Portafolio Profesional</title>
     <meta name="description" content="Portafolio profesional de Richard Avilés López: Data Analyst, Data Scientist y ML Developer. Descubre mis proyectos en Inferencia Causal, Forecasting y desarrollo Backend.">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <style>
-        /* CSS del usuario - Corregido y adaptado */
-        /* Importar fuentes de Google Fonts */
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap');
-
-        /* Variables CSS para una paleta de colores profesional */
-        :root {
-            --primary-color: #172a3a; /* Azul oscuro elegante */
-            --secondary-color: #3b8686; /* Azul verdoso suave y profesional */
-            --accent-color: #c6e4e4; /* Azul pastel muy claro */
-            --text-dark: #343a40; /* Casi negro de Bootstrap */
-            --text-muted: #6c757d; /* Gris para texto secundario */
-            --bg-light: #f8f9fa; /* Fondo claro de Bootstrap */
-            --bg-white: #ffffff; /* Blanco puro */
-        }
-
-        /* Estilos generales y de tipografía */
-        body {
-            font-family: 'Montserrat', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background-color: var(--bg-white);
-            scroll-behavior: smooth;
-        }
-
-        h1, h2, h3, .navbar-brand {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-        }
-
-        h1 {
-            color: var(--bg-white);
-        }
-
-        h2 {
-            color: var(--primary-color);
-        }
-
-        .text-primary {
-            color: var(--primary-color) !important;
-        }
-
-        .btn-outline-primary {
-            color: var(--primary-color);
-            border-color: var(--primary-color);
-            transition: all 0.3s ease;
-        }
-        .btn-outline-primary:hover {
-            background-color: var(--primary-color);
-            color: var(--bg-white);
-        }
-
-        /* --- Navbar Mejorado --- */
-        .navbar-brand {
-            color: var(--primary-color) !important;
-            font-weight: 700;
-        }
-
-        .nav-link.fw-semibold {
-            font-weight: 600 !important;
-            color: var(--text-dark);
-            transition: color 0.3s ease;
-        }
-
-        .nav-link:hover {
-            color: var(--secondary-color) !important; /* Nuevo color al pasar el ratón */
-        }
-
-        /* --- Hero Section Mejorada --- */
-        .hero-section {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            min-height: 100vh;
-            padding-top: 56px;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: var(--bg-white);
-        }
-
-        .hero-section h1 {
-            font-size: clamp(2rem, 5vw, 4rem); /* Fuente responsiva */
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
-        }
-
-        .hero-section .lead {
-            font-size: clamp(1rem, 2.5vw, 1.6rem); /* Fuente responsiva */
-            font-weight: 300;
-        }
-
-        .hero-section .btn {
-            border-color: var(--bg-white) !important;
-            color: var(--primary-color) !important;
-            background-color: var(--bg-white) !important;
-            transition: all 0.3s ease;
-        }
-        .hero-section .btn:hover {
-            background-color: var(--accent-color) !important;
-            color: var(--primary-color) !important;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-
-        /* --- Secciones Generales --- */
-        section {
-            padding: 5rem 0;
-            overflow: hidden;
-        }
-
-        /* --- Portfolio Section --- */
-        .portfolio-section .card {
-            border: none;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            background-color: var(--bg-white);
-            border-radius: 0.75rem; /* Bordes más suaves */
-        }
-
-        .portfolio-section .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
-        }
-
-        .portfolio-section .card-img-top {
-            border-bottom: 1px solid var(--accent-color); /* Borde suave */
-        }
-
-        /* --- About Section --- */
-        .about-section .img-fluid {
-            border: 8px solid var(--secondary-color);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-        }
-
-        /* --- Contact Section --- */
-        .contact-section {
-            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-        }
-
-        .contact-section .form-control {
-            background-color: rgba(255, 255, 255, 0.15);
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            color: var(--bg-white);
-            font-weight: 300;
-        }
-
-        .contact-section .form-control::placeholder {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .contact-section .form-control:focus {
-            background-color: rgba(255, 255, 255, 0.25);
-            border-color: var(--bg-white);
-            box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
-            color: var(--bg-white);
-        }
-
-        .contact-section .btn-light {
-            color: var(--primary-color) !important;
-            font-weight: 600 !important;
-            transition: all 0.3s ease;
-        }
-
-        .contact-section .btn-light:hover {
-            background-color: var(--bg-light) !important;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        .social-links a {
-            transition: transform 0.3s ease, color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            transform: translateY(-5px) scale(1.1);
-            color: var(--accent-color) !important;
-        }
-
-        /* --- Footer --- */
-        .footer {
-            background-color: var(--text-dark);
-        }
-
-        /* Media Queries para responsividad */
-        @media (max-width: 991.98px) {
-            .navbar-collapse {
-                background-color: var(--bg-white);
-                padding: 1rem;
-                border-radius: 0.5rem;
-                margin-top: 0.5rem;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            }
-            .navbar-nav .nav-item {
-                margin-left: 0;
-                margin-bottom: 0.5rem;
-            }
-            .navbar-nav .nav-link {
-                padding-left: 1rem;
-            }
-            .about-section .img-fluid {
-                width: 250px;
-                height: 250px;
-            }
-        }
-        @media (max-width: 767.98px) {
-            .about-section .img-fluid {
-                width: 200px;
-                height: 200px;
-            }
-        }
-
-        /* --- Estilos para la galería pop-up (modal) --- */
-        .modal-gallery {
-            display: none; 
-            position: fixed;
-            z-index: 1050;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-
-        .modal-content-wrapper {
-            position: relative;
-            max-width: 90%;
-            max-height: 90%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-menu-container {
-            width: 100%;
-            max-width: 600px;
-        }
-
-        #gallery-menu {
-            width: 100%;
-            font-size: 1.25rem;
-            font-weight: 500;
-        }
-
-        .modal-image {
-            max-width: 100%;
-            max-height: calc(100vh - 150px);
-            display: block;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
-        .close-btn {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-
-        .close-btn:hover,
-        .close-btn:focus {
-            color: var(--secondary-color);
-            text-decoration: none;
-        }
-
-        .prev-btn, .next-btn {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -22px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            background-color: rgba(0,0,0,0.5);
-            border: none;
-        }
-
-        .prev-btn {
-            left: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .next-btn {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-        .prev-btn:hover, .next-btn:hover {
-            background-color: rgba(0,0,0,0.8);
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -366,7 +61,7 @@
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Causal Inference</h3>
                             <p class="card-text text-muted mb-auto">Algoritmo EMMSA para el Análisis Causal en la industria.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="causal-inference">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="https://www.mdpi.com/2227-7390/11/21/4506" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -376,7 +71,7 @@
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Doctoral Thesis</h3>
                             <p class="card-text text-muted mb-auto">Análisis Causal de Estudios Observacionales: Aplicación Industrial</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="doctoral-thesis">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -386,27 +81,27 @@
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Forecasting</h3>
                             <p class="card-text text-muted mb-auto">Pronóstico de precios.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="forecasting">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 d-flex">
                     <div class="card shadow-sm rounded-3 overflow-hidden flex-fill">
-                        <img src="./imgs/business-5475664_1280.jpg" class="card-img-top" alt="Industrial Process Control" style="height: 250px; object-fit: cover;">
+                        <img src="./imgs/business-5475664_1280.jpg" class="card-img-top" alt="Consultoría y Arquitectura" style="height: 250px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Industrial Process Control</h3>
                             <p class="card-text text-muted mb-auto">Control de Variables de Procesos Industriales - Detección de Anomalías</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="industrial-control">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4 d-flex">
+                 <div class="col-md-6 col-lg-4 d-flex">
                     <div class="card shadow-sm rounded-3 overflow-hidden flex-fill">
                         <img src="./imgs/software-development-6523979_1280.jpg" class="card-img-top" alt="Desarrollo Backend con Django" style="height: 250px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Backend Development</h3>
                             <p class="card-text text-muted mb-auto">Construcción de APIs con Django API Rest Framework.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="backend-dev">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -416,7 +111,7 @@
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Data Analyst</h3>
                             <p class="card-text text-muted mb-auto">Transformación de datos complejos en insights claros y visualizaciones impactantes para la toma de decisiones.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="data-analyst">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -426,7 +121,7 @@
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Classification</h3>
                             <p class="card-text text-muted mb-auto">Classificación</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="classification">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -436,7 +131,7 @@
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Regression</h3>
                             <p class="card-text text-muted mb-auto">Regresión.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="regression">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -446,7 +141,7 @@
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">AI Application</h3>
                             <p class="card-text text-muted mb-auto">Aplicaciones AI.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="ai-application">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -464,7 +159,7 @@
                 <div class="col-lg-6 order-lg-1 text-lg-start text-center">
                     <p class="lead mb-3 text-muted">Soy Ingeniero en Computación y he estudiado un Master en Desarrollo de Software y un PhD en TIC en el campo de la Inferencia Causal.</p>
                     <p class="mb-3 text-muted"> </p>
-                    <p class="text-muted">  </p>
+                    <p class="text-muted">  </p>
                 </div>
             </div>
         </div>
@@ -476,31 +171,31 @@
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4 d-flex">
                     <div class="card shadow-sm rounded-3 overflow-hidden flex-fill">
-                        <img src="./imgs/kelli-mcclintock-GopRYASfsOc-unsplash.jpg" class="card-img-top" alt="Stochastic Process" style="height: 250px; object-fit: cover;">
+                        <img src="./imgs/kelli-mcclintock-GopRYASfsOc-unsplash.jpg" class="card-img-top" alt="Causal Inference" style="height: 250px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Stochastic Process - Time Series Analysis</h3>
                             <p class="card-text text-muted mb-auto">Master en Business Intelligence ediciones 2023-2025 y Master en Big Data edicion 2024.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="stochastic-process">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 d-flex">
                     <div class="card shadow-sm rounded-3 overflow-hidden flex-fill">
-                        <img src="./imgs/kelli-mcclintock-GopRYASfsOc-unsplash.jpg" class="card-img-top" alt="Data Mining" style="height: 250px; object-fit: cover;">
+                        <img src="./imgs/kelli-mcclintock-GopRYASfsOc-unsplash.jpg" class="card-img-top" alt="Causal Inference" style="height: 250px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Data Mining</h3>
                             <p class="card-text text-muted mb-auto">Master en Big Data edicion 2024.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="data-mining">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 d-flex">
                     <div class="card shadow-sm rounded-3 overflow-hidden flex-fill">
-                        <img src="./imgs/kelli-mcclintock-GopRYASfsOc-unsplash.jpg" class="card-img-top" alt="Software Engineering" style="height: 250px; object-fit: cover;">
+                        <img src="./imgs/kelli-mcclintock-GopRYASfsOc-unsplash.jpg" class="card-img-top" alt="Causal Inference" style="height: 250px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Software Engineering</h3>
                             <p class="card-text text-muted mb-auto">Carrera Ingeniería en Sistemas Inteligentes - 2024.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="software-engineering">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -508,20 +203,25 @@
         </div>
     </section>
 
+
+        <!-- Sección de Cursos Recibidos -->
     <section id="cursos_recibidos" class="cursos-section py-5 bg-light">
         <div class="container">
             <h2 class="text-center mb-5 display-4 fw-bold text-primary">Cursos Recibidos</h2>
             <div class="row g-4" id="cursos-container">
+                <!-- Tarjeta de ejemplo para cursos, con el id y la clase para el JS -->
                 <div class="col-md-6 col-lg-4 d-flex">
                     <div class="card shadow-sm rounded-3 overflow-hidden flex-fill">
                         <img src="./imgs/growtika-WELyMatW3mw-unsplash.jpg" class="card-img-top" alt="Cloud Computing" style="height: 250px; object-fit: cover;">
                         <div class="card-body d-flex flex-column">
                             <h3 class="card-title fw-bold text-dark">Cloud Computing</h3>
                             <p class="card-text text-muted mb-auto">Proyectos de Cloud Computing y Google Cloud Platform.</p>
-                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="cloud-computing">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
+                            <!-- El botón ahora usa el atributo 'data-gallery-id' para el JS -->
+                            <a href="#" class="btn btn-outline-primary mt-3 align-self-start open-gallery-btn" data-gallery-id="Cloud Computing">Ver Detalles <i class="bi bi-box-arrow-up-right"></i></a>
                         </div>
                     </div>
                 </div>
+                <!-- Otros cursos pueden seguir aquí -->
             </div>
         </div>
     </section>
@@ -530,6 +230,9 @@
     <div id="gallery-modal" class="modal-gallery">
         <div class="modal-content-wrapper">
             <span class="close-btn">&times;</span>
+            <div class="modal-menu-container">
+                <!-- El menú de galerías será generado aquí si es necesario -->
+            </div>
             <img id="modal-image" class="modal-image" src="" alt="">
             <a id="prev-btn" class="prev-btn">&#10094;</a>
             <a id="next-btn" class="next-btn">&#10095;</a>
@@ -569,11 +272,13 @@
         </div>
     </section>
 
-    <!-- Modal de la galería pop-up - Corregido para no tener dos IDs iguales -->
-    <!-- El modal ha sido simplificado ya que no se necesita un menú de galerías -->
-    <div id="gallery-modal-2" class="modal-gallery">
+    <!-- Modal de la galería pop-up -->
+    <div id="gallery-modal" class="modal-gallery">
         <div class="modal-content-wrapper">
             <span class="close-btn">&times;</span>
+            <div class="modal-menu-container">
+                <select id="gallery-menu" class="form-select mb-3"></select>
+            </div>
             <img id="modal-image" class="modal-image" src="" alt="">
             <a id="prev-btn" class="prev-btn">&#10094;</a>
             <a id="next-btn" class="next-btn">&#10095;</a>
@@ -587,169 +292,8 @@
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eCEYyUraMhHwN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eCEYyUraMhHwN" crossorigin="anonymous"></script>
 
-    <script>
-        // JS del usuario - Unificado y Corregido
-        document.addEventListener('DOMContentLoaded', () => {
-
-            // ----------------------------------------------------
-            // 1. Smooth scrolling para los enlaces del menú
-            // ----------------------------------------------------
-            const navbarLinks = document.querySelectorAll('.navbar-nav a, .hero-section .btn');
-            const navbar = document.querySelector('.navbar');
-
-            navbarLinks.forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    
-                    const navbarCollapse = document.querySelector('#navbarNav');
-                    if (navbarCollapse.classList.contains('show')) {
-                        const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-                        bsCollapse.hide();
-                    }
-
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href');
-                    const targetElement = document.querySelector(targetId);
-
-                    if (targetElement) {
-                        const headerOffset = navbar.offsetHeight;
-                        const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                        const offsetPosition = elementPosition - headerOffset - 20;
-
-                        window.scrollTo({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-            // ----------------------------------------------------
-            // 2. Lógica de la galería de imágenes pop-up
-            // ----------------------------------------------------
-
-            // Define las imágenes para cada galería. Adapta las rutas si es necesario.
-            const galleriesData = {
-                'causal-inference': [
-                    './imgs/kelli-mcclintock-GopRYASfsOc-unsplash.jpg',
-                    'https://placehold.co/800x600/172a3a/ffffff?text=Inferencia+Causal+2',
-                    'https://placehold.co/800x600/172a3a/ffffff?text=Inferencia+Causal+3'
-                ],
-                'doctoral-thesis': [
-                    './imgs/logan-voss-eCYWtGTDKS4-unsplash.jpg',
-                    'https://placehold.co/800x600/3b8686/ffffff?text=Tesis+Doctoral+1',
-                    'https://placehold.co/800x600/3b8686/ffffff?text=Tesis+Doctoral+2'
-                ],
-                'forecasting': [
-                    './imgs/behnam-norouzi-5mK7vv6dHlg-unsplash.jpg',
-                    'https://placehold.co/800x600/c6e4e4/172a3a?text=Forecasting+1'
-                ],
-                'industrial-control': [
-                    './imgs/business-5475664_1280.jpg',
-                    'https://placehold.co/800x600/3b8686/ffffff?text=Control+Industrial'
-                ],
-                'backend-dev': [
-                    './imgs/software-development-6523979_1280.jpg',
-                    'https://placehold.co/800x600/172a3a/ffffff?text=Backend+Django+1'
-                ],
-                'data-analyst': [
-                    './imgs/lukas-blazek-mcSDtbWXUZU-unsplash.jpg',
-                    'https://placehold.co/800x600/c6e4e4/172a3a?text=Análisis+de+Datos'
-                ],
-                'classification': [
-                    './imgs/dan-cristian-padure-ritZolQWTeE-unsplash.jpg',
-                    'https://placehold.co/800x600/3b8686/ffffff?text=Clasificación'
-                ],
-                'regression': [
-                    './imgs/thisisengineering-f4pUuCc3M0g-unsplash.jpg',
-                    'https://placehold.co/800x600/172a3a/ffffff?text=Regresión'
-                ],
-                'ai-application': [
-                    './imgs/waqar-mujahid-NU_s4KI_zME-unsplash.jpg',
-                    'https://placehold.co/800x600/c6e4e4/172a3a?text=Aplicaciones+AI'
-                ],
-                'stochastic-process': [
-                    './imgs/kelli-mcclintock-GopRYASfsOc-unsplash.jpg',
-                    'https://placehold.co/800x600/172a3a/ffffff?text=Procesos+Estocásticos'
-                ],
-                'data-mining': [
-                    './imgs/kelli-mcclintock-GopRYASfsOc-unsplash.jpg',
-                    'https://placehold.co/800x600/3b8686/ffffff?text=Minería+de+Datos'
-                ],
-                'software-engineering': [
-                    './imgs/kelli-mcclintock-GopRYASfsOc-unsplash.jpg',
-                    'https://placehold.co/800x600/c6e4e4/172a3a?text=Ingeniería+de+Software'
-                ],
-                'cloud-computing': [
-                    './imgs/growtika-WELyMatW3mw-unsplash.jpg',
-                    'https://placehold.co/800x600/172a3a/ffffff?text=Cloud+Computing+2'
-                ]
-            };
-
-            const modal = document.getElementById('gallery-modal');
-            const modalImage = document.getElementById('modal-image');
-            const closeBtn = document.querySelector('.close-btn');
-            const prevBtn = document.getElementById('prev-btn');
-            const nextBtn = document.getElementById('next-btn');
-            let currentImages = [];
-            let currentIndex = 0;
-
-            function openModal(galleryId) {
-                currentImages = galleriesData[galleryId] || [];
-                if (currentImages.length > 0) {
-                    currentIndex = 0;
-                    showImage(currentIndex);
-                    modal.style.display = 'flex';
-                } else {
-                    console.error('Galería no encontrada o vacía:', galleryId);
-                }
-            }
-
-            function closeModal() {
-                modal.style.display = 'none';
-            }
-
-            function showImage(index) {
-                if (index < 0) {
-                    currentIndex = currentImages.length - 1;
-                } else if (index >= currentImages.length) {
-                    currentIndex = 0;
-                } else {
-                    currentIndex = index;
-                }
-                modalImage.src = currentImages[currentIndex];
-            }
-
-            // Event listeners
-            closeBtn.addEventListener('click', closeModal);
-            nextBtn.addEventListener('click', () => showImage(currentIndex + 1));
-            prevBtn.addEventListener('click', () => showImage(currentIndex - 1));
-
-            // Captura los clics en los botones para abrir la galería
-            document.addEventListener('click', (e) => {
-                const button = e.target.closest('.open-gallery-btn');
-                if (button) {
-                    e.preventDefault();
-                    const galleryId = button.getAttribute('data-gallery-id');
-                    openModal(galleryId);
-                }
-            });
-
-            // Cierre del modal con la tecla 'Esc'
-            document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && modal.style.display === 'flex') {
-                    closeModal();
-                }
-            });
-            
-            // Cierre del modal al hacer clic fuera del contenido principal
-            modal.addEventListener('click', (e) => {
-                if (e.target.id === 'gallery-modal') {
-                    closeModal();
-                }
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
